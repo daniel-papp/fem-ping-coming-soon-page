@@ -1,0 +1,19 @@
+// Colors
+
+$clr-primary: hsl(223, 87%, 63%);
+$clr-accent-blue: hsl(223, 100%, 88%);
+$clr-accent-red: hsl(354, 100%, 66%);
+$clr-text-light: hsl(0, 0%, 59%);
+$clr-text-dark: hsl(209, 33%, 12%);
+
+// Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+$ff-main: 'Libre Franklin', sans-serif;
+
+// Typohraphy
+
+:root {
+    font-size: 20px;
+    font-family: $ff-main;
+}
