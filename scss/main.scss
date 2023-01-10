@@ -1,2 +1,86 @@
 @use "./reset.scss";
 @use "./config" as c;
+
+body {
+    min-height: 100vh;
+}
+
+body,
+header,
+main,
+form,
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    margin: 6rem auto 2rem auto;
+
+    .logo {
+        margin-bottom: 3rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: c.$clr-text-light;
+        margin-bottom: 1rem;
+
+        strong {
+            font-weight: 700;
+            color: c.$clr-text-dark;
+        }
+    }
+
+    .subtitle {
+        color: c.$clr-text-dark;
+        font-size: 0.8rem;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+
+    input,
+    button {
+        font-size: 0.8rem;
+        width: 100%;
+        margin: 0.5em auto;
+        padding: 1em 2em;
+        border-radius: 5em;
+    }
+
+    input {
+        color: c.$clr-text-dark;
+        border: 1px solid c.$clr-accent-blue;
+
+        &::placeholder {
+            color: c.$clr-text-light    ;
+        }
+    }
+
+    button {
+        background-color: c.$clr-primary;
+        color: #fff;
+        box-shadow: 0px 8px 12px 2px hsl(223, 100%, 88%, 0.7);
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background-color: lighten(c.$clr-primary, 5%);
+        }
+    }
+}
+
+
+.illustration {
+    width: 85%;
+    margin: 5rem auto;
+}
