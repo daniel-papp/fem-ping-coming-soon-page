@@ -59,7 +59,7 @@ form {
 
     input {
         color: c.$clr-text-dark;
-        border: 1px solid c.$clr-accent-blue;
+        border: 2px solid c.$clr-accent-blue;
 
         &::placeholder {
             color: c.$clr-text-light    ;
@@ -79,8 +79,40 @@ form {
     }
 }
 
-
 .illustration {
     width: 85%;
-    margin: 5rem auto;
+    margin: 5rem auto 10rem auto;
+}
+
+.social-icon {
+    width: 0.9em;
+    height: 0.9em;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+
+    li {
+        list-style: none;
+        border: 1px solid c.$clr-accent-blue;
+        height: 1.8em;
+        width: 1.8em;
+        border-radius: 50%;
+        
+    }
+
+    li,
+    li > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.copyright {
+    font-size: 0.6rem;
+    color: c.$clr-text-light;
+    margin: 3em auto 4em auto;
 }

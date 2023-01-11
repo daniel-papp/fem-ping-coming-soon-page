@@ -74,7 +74,7 @@ form button {
 }
 form input {
   color: hsl(209deg, 33%, 12%);
-  border: 1px solid hsl(223deg, 100%, 88%);
+  border: 2px solid hsl(223deg, 100%, 88%);
 }
 form input::placeholder {
   color: hsl(0deg, 0%, 59%);
@@ -91,7 +91,37 @@ form button:hover, form button:focus {
 
 .illustration {
   width: 85%;
-  margin: 5rem auto;
+  margin: 5rem auto 10rem auto;
+}
+
+.social-icon {
+  width: 0.9em;
+  height: 0.9em;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.social-links li {
+  list-style: none;
+  border: 1px solid hsl(223deg, 100%, 88%);
+  height: 1.8em;
+  width: 1.8em;
+  border-radius: 50%;
+}
+.social-links li,
+.social-links li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 0.6rem;
+  color: hsl(0deg, 0%, 59%);
+  margin: 3em auto 4em auto;
 }
 
 /*# sourceMappingURL=style.css.map */
