@@ -94,11 +94,6 @@ form button:hover, form button:focus {
   margin: 5rem auto 10rem auto;
 }
 
-.social-icon {
-  width: 0.9em;
-  height: 0.9em;
-}
-
 .social-links {
   display: flex;
   flex-direction: row;
@@ -107,15 +102,30 @@ form button:hover, form button:focus {
 .social-links li {
   list-style: none;
   border: 1px solid hsl(223deg, 100%, 88%);
-  height: 1.8em;
-  width: 1.8em;
+  height: 1.7em;
+  width: 1.7em;
   border-radius: 50%;
-}
-.social-links li,
-.social-links li > a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.social-links li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.7em;
+  width: 1.7em;
+}
+.social-links li a .social-icon {
+  width: 0.9em;
+  height: 0.9em;
+  fill: hsl(223deg, 87%, 63%);
+}
+.social-links li:hover {
+  background-color: hsl(223deg, 87%, 63%);
+}
+.social-links li:hover .social-icon {
+  fill: #fff;
 }
 
 .copyright {

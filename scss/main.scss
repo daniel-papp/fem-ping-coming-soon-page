@@ -84,10 +84,7 @@ form {
     margin: 5rem auto 10rem auto;
 }
 
-.social-icon {
-    width: 0.9em;
-    height: 0.9em;
-}
+
 
 .social-links {
     display: flex;
@@ -97,19 +94,39 @@ form {
     li {
         list-style: none;
         border: 1px solid c.$clr-accent-blue;
-        height: 1.8em;
-        width: 1.8em;
+        height: 1.7em;
+        width: 1.7em;
         border-radius: 50%;
-        
-    }
-
-    li,
-    li > a {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 1.7em;
+            width: 1.7em;
+
+            .social-icon {
+                width: 0.9em;
+                height: 0.9em;
+                fill: c.$clr-primary;
+            }
+        }
+
+        &:hover {
+            background-color: c.$clr-primary;
+
+            .social-icon {
+                fill: #fff;
+            }
+        }
+        
     }
 }
+
+
 
 .copyright {
     font-size: 0.6rem;
