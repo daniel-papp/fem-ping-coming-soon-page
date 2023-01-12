@@ -43,7 +43,7 @@ header .logo {
   margin-bottom: 3rem;
 }
 header .title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 300;
   color: hsl(0deg, 0%, 59%);
   margin-bottom: 1rem;
@@ -91,6 +91,7 @@ form button:hover, form button:focus {
 
 .illustration {
   width: 85%;
+  max-width: 40rem;
   margin: 5rem auto 10rem auto;
 }
 
@@ -132,6 +133,26 @@ form button:hover, form button:focus {
   font-size: 0.6rem;
   color: hsl(0deg, 0%, 59%);
   margin: 3em auto 4em auto;
+}
+
+@media (min-width: 680px) {
+  header .title {
+    font-size: 2rem;
+  }
+  header .subtitle {
+    font-size: 1rem;
+  }
+  form {
+    width: 95%;
+    flex-direction: row;
+    gap: 1em;
+  }
+  form button {
+    max-width: 12em;
+  }
+  .illustration {
+    margin: 3rem auto 4rem auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

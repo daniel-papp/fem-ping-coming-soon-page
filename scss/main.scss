@@ -1,5 +1,6 @@
 @use "./reset.scss";
 @use "./config" as c;
+@use "./media" as m;
 
 body {
     min-height: 100vh;
@@ -24,7 +25,7 @@ header {
     }
 
     .title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 300;
         color: c.$clr-text-light;
         margin-bottom: 1rem;
@@ -62,7 +63,7 @@ form {
         border: 2px solid c.$clr-accent-blue;
 
         &::placeholder {
-            color: c.$clr-text-light    ;
+            color: c.$clr-text-light;
         }
     }
 
@@ -81,6 +82,7 @@ form {
 
 .illustration {
     width: 85%;
+    max-width: 40rem;
     margin: 5rem auto 10rem auto;
 }
 
@@ -122,14 +124,13 @@ form {
                 fill: #fff;
             }
         }
-        
     }
 }
-
-
 
 .copyright {
     font-size: 0.6rem;
     color: c.$clr-text-light;
     margin: 3em auto 4em auto;
 }
+
+@include m.desktop-view;
