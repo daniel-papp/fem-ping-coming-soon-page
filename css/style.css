@@ -151,8 +151,11 @@ input:invalid:not(:focus):not(:placeholder-shown) {
 input:invalid:not(:focus):not(:placeholder-shown) ~ span {
   display: block;
 }
-input:invalid:not(:focus):not(:placeholder-shown) ~ span::before {
+input:invalid:not(:focus):not(:placeholder-shown) ~ span.error-format::before {
   content: "Please provide a valid email adress";
+}
+input:invalid:not(:focus):not(:placeholder-shown) ~ span.error-empty::before {
+  content: "Whoops! It looks like you forgot to add your email";
 }
 
 @media (min-width: 680px) {

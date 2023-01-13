@@ -153,9 +153,12 @@ input:invalid:not(:focus):not(:placeholder-shown) {
     & ~ span {
         display: block;
 
-        &::before {
+        &.error-format::before {
             content: "Please provide a valid email adress";
-    
+        }
+
+        &.error-empty::before {
+            content: "Whoops! It looks like you forgot to add your email";
         }
     }
 
