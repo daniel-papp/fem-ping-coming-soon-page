@@ -19,9 +19,10 @@ const formValidator = (function() {
 
         }
 
+        console.log(emailField.value);
     }
 
     submitButton.addEventListener('click', checkEmail);
-    emailField.addEventListener('keydown', checkEmail);
+    emailField.addEventListener('keyup', checkEmail);
 
 })();
