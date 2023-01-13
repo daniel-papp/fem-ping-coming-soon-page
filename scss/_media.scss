@@ -38,7 +38,6 @@
         input:invalid:not(:focus):not(:placeholder-shown) {
 
             & ~ span::before {
-                content: "Please provide a valid email adress";
                 position: absolute;
                 top: 5em;
                 left: 1.5em;

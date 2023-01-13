@@ -6,6 +6,7 @@
     <title>PING Coming Soon Page</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./assets/favicon-32x32.png" type="image/x-icon">
+    <script src="./main.js" defer></script>
 </head>
 <body>
     <header>
@@ -17,7 +18,7 @@
         <form action="?" method="post" id="newsletter-form">
             <input type="email" name="user-email" id="user-email" placeholder="Your email adress..." required pattern="^[\w\d\.-]+@[a-zA-Z-]+\.[a-zA-Z]+(\.[a-zA-Z]+)?$">
             <span></span>
-            <button type="submit" form="newsletter-form">Notify Me</button>
+            <button type="submit" form="newsletter-form" id="submit-btn">Notify Me</button>
         </form>
         <img class="illustration" src="./assets/illustration-dashboard.png" alt="preview of the PING UI">
     </main>
