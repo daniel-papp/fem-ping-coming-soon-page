@@ -63,6 +63,7 @@ form {
   justify-content: center;
   align-items: center;
   width: 75%;
+  position: relative;
 }
 form input,
 form button {
@@ -78,6 +79,15 @@ form input {
 }
 form input::placeholder {
   color: hsl(0deg, 0%, 59%);
+}
+form input ~ span {
+  position: relative;
+  display: none;
+  font-size: 0.6rem;
+  color: hsl(354deg, 100%, 66%);
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 1em auto;
 }
 form button {
   background-color: hsl(223deg, 87%, 63%);
@@ -135,6 +145,16 @@ form button:hover, form button:focus {
   margin: 3em auto 4em auto;
 }
 
+input:invalid:not(:focus):not(:placeholder-shown) {
+  border: 2px solid #ff8591;
+}
+input:invalid:not(:focus):not(:placeholder-shown) ~ span {
+  display: block;
+}
+input:invalid:not(:focus):not(:placeholder-shown) ~ span::before {
+  content: "Please provide a valid email adress";
+}
+
 @media (min-width: 680px) {
   header .title {
     font-size: 2rem;
@@ -150,8 +170,19 @@ form button:hover, form button:focus {
   form button {
     max-width: 12em;
   }
+  form input ~ span {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+  }
   .illustration {
     margin: 3rem auto 4rem auto;
+  }
+  input:invalid:not(:focus):not(:placeholder-shown) ~ span::before {
+    content: "Please provide a valid email adress";
+    position: absolute;
+    top: 5em;
+    left: 1.5em;
   }
 }
 

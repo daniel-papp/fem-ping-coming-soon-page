@@ -23,10 +23,29 @@
                 max-width: 12em;
             }
 
+            input ~ span {
+                position: absolute;
+                top: 1em;
+                left: 1em;
+            }
+
         }
 
         .illustration {
             margin: 3rem auto 4rem auto;
         }
+
+        input:invalid:not(:focus):not(:placeholder-shown) {
+
+            & ~ span::before {
+                content: "Please provide a valid email adress";
+                position: absolute;
+                top: 5em;
+                left: 1.5em;
+            }
+        
+        }
     }
 }
+
+

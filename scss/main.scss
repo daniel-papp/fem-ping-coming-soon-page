@@ -48,6 +48,7 @@ form {
     justify-content: center;
     align-items: center;
     width: 75%;
+    position: relative;
 
     input,
     button {
@@ -64,6 +65,16 @@ form {
 
         &::placeholder {
             color: c.$clr-text-light;
+        }
+
+        & ~ span {
+            position: relative;
+            display: none;
+            font-size: 0.6rem;
+            color: c.$clr-accent-red;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto 1em auto;
         }
     }
 
@@ -132,5 +143,25 @@ form {
     color: c.$clr-text-light;
     margin: 3em auto 4em auto;
 }
+
+
+// Validation styling
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+    border: 2px solid lighten(c.$clr-accent-red, 10%);
+
+    & ~ span {
+        display: block;
+
+        &::before {
+            content: "Please provide a valid email adress";
+    
+        }
+    }
+
+}
+
+
+
 
 @include m.desktop-view;

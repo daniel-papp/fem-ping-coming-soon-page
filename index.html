@@ -15,7 +15,8 @@
     </header>
     <main>
         <form action="?" method="post" id="newsletter-form">
-            <input type="email" name="user-email" id="user-email" placeholder="Your email adress..." required>
+            <input type="email" name="user-email" id="user-email" placeholder="Your email adress..." required pattern="^[\w\d\.-]+@[a-zA-Z-]+\.[a-zA-Z]+(\.[a-zA-Z]+)?$">
+            <span></span>
             <button type="submit" form="newsletter-form">Notify Me</button>
         </form>
         <img class="illustration" src="./assets/illustration-dashboard.png" alt="preview of the PING UI">
